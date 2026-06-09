@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoMaze</title>
+    
+    <script type="module" crossorigin src="/assets/index-073b08d0.js"></script>
+    <link rel="stylesheet" href="/assets/index-715cc1ac.css">
+  </head>
+  <body>
+    <!-- Join Menu -->
+    <div id="join-menu">
+      <div class="menu-content">
+        <h1 class="game-title">EchoMaze</h1>
+        <p class="subtitle">A blind monster is hunting you.<br>Use your voice carefully.</p>
+        <button id="start-btn">Join Game</button>
+        <div id="status-text"></div>
+      </div>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pause-menu" class="hidden">
+      <div class="menu-content">
+        <h2 class="game-title">Paused</h2>
+        <p class="subtitle">The game is still running in the background!</p>
+        <button id="resume-btn">Resume Game</button>
+      </div>
+    </div>
+
+    <!-- HUD Overlay -->
+    <div id="hud-layer" class="hidden">
+      <div id="role-text">Role: None</div>
+      <div id="stamina-container">
+        <div id="stamina-fill"></div>
+      </div>
+      <div id="crosshair">+</div>
+      <div class="instructions">Use W A S D to move. Mouse to look. Press 'E' for Minigame. ESC to pause.</div>
+    </div>
+
+    <!-- Minigame Overlay -->
+    <div id="minigame-layer" class="hidden">
+      <div id="minigame-container">
+          <h2>Fix the Generator</h2>
+          <p>Click a wire on the left, then click matching color on the right.</p>
+          <div id="wire-game">
+              <div id="left-wires" class="wire-col"></div>
+              <canvas id="wire-canvas"></canvas>
+              <div id="right-wires" class="wire-col"></div>
+          </div>
+          <button id="close-minigame-btn">Cancel</button>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
